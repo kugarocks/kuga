@@ -1,4 +1,4 @@
 # Table of contents
 
 * [😼 kuga](README.md)
-* [🙀 Foo](foo.md)
+* [😎 OSX ENV](osx-env.md)
