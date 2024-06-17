@@ -1,8 +1,25 @@
 # 😎 OSX ENV
 
-## Zsh Config
+## iTerm2
 
+[Terminal emulator for macOS.](https://iterm2.com/)
 
+Preferences config
+
+* [x] Search -> Dim inactive split panes
+* [x] Search -> Global key bindings, +
+  * Select Split Pane Above, CMD+I
+  * Select Split Pane on Left, CMD+J
+  * Select Split Pane Below, CMD+K
+  * Select Split Pane on Right, CMD+L
+
+## Oh My Zsh
+
+Installation command
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## Git Config
 
@@ -44,10 +61,63 @@ Replace name, email, GitHub user.
 	rebase = false// Some code
 ```
 
+## Kubernetes
+
+[kubectl: The Kubernetes command-line tool.](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+
+```
+brew install kubectl
+```
+
+[kubectx: Switch between contexts & namespaces.](https://github.com/ahmetb/kubectx)
+
+```
+brew install kubectx
+```
+
+Add the following to your `.zshrc` file:
+
+```
+# kubectx
+alias kc="kubectx"
+alias kn="kubens"
+
+KUBECTX_CURRENT_FGCOLOR=$(tput setaf 6)
+```
+
+[kube-ps1: Kubernetes prompt for bash and zsh.](https://github.com/jonmosco/kube-ps1)
+
+```
+brew install kube-ps1
+```
+
+Add the following to your `.zshrc` file:
+
+```
+# kube-ps1
+# https://github.com/jonmosco/kube-ps1
+# todo change source path
+source /usr/local/Cellar/kube-ps1/0.7.0/share/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
+KUBE_PS1_PREFIX="["
+KUBE_PS1_SUFFIX="]"
+KUBE_PS1_SYMBOL_ENABLE=false
+KUBE_PS1_CTX_COLOR="83"
+KUBE_PS1_NS_COLOR="201"
+```
+
+[kubectl-aliases: Convenient shell aliases for kubectl.](https://github.com/ahmetb/kubectl-aliases)
+
+Download [.kubectl\_aliases](https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl\_aliases) file & Add the following to your `.zshrc` file:
+
+```
+# load kubectl aliases file
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+# Print the full command before running it
+function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+```
+
 ## Tools
 
 * [HSTR: Easily view, navigate and search your command history.](https://github.com/dvorka/hstr)
-* [kube-ps1: Kubernetes prompt for bash and zsh.](https://github.com/jonmosco/kube-ps1)
-
-## Kubernetes
-
