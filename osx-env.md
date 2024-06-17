@@ -44,6 +44,20 @@ alias lf='ll -p | grep -v /'
 alias ldir='ls -ld -- */'
 ```
 
+## HSTR
+
+[Easily view, navigate and search your command history.](https://github.com/dvorka/hstr)
+
+```
+brew install hstr
+```
+
+Configure HSTR just by running:
+
+```
+hstr --show-zsh-configuration >> ~/.zshrc
+```
+
 ## Git Config
 
 Replace name, email, GitHub user.
@@ -141,6 +155,3 @@ Download [.kubectl\_aliases](https://raw.githubusercontent.com/ahmetb/kubectl-al
 function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 ```
 
-## Tools
-
-* [HSTR: Easily view, navigate and search your command history.](https://github.com/dvorka/hstr)
