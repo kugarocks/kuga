@@ -1,4 +1,34 @@
+---
+description: 我的地盘听我的
+---
+
 # 😎 OSX ENV
+
+## Keyboard
+
+System Prefrences
+
+* [x] Key Repeat: Fast
+* [x] Delay Until Repeat: Short
+* [x] Modifier Keys: Caps Lock -> Escape
+
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Shortcuts
+
+* [x] App Shortcuts, +
+  * [x] All Applications, Zoom, CMD+M
+  * [x] All Applications, Minimize, CMD+H
+  * [x] Chrome, Bookmark This Tab, CMD+L
+  * [x] Chrome, Open Location..., CMD+D
+  * [x] Chrome, Downloads, SHIFT+CMD+D
+* [x] Input Sources
+  * [x] Select the previous input source, CMD+E
+* [x] Spotlight
+  * [x] Show Spotlight search: OPTION+SPACE
+  * [x] [Install Alfred](https://www.alfredapp.com/)
 
 ## iTerm2
 
