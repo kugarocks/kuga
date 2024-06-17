@@ -21,6 +21,29 @@ Installation command
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+Custom Alias:
+
+```
+# custom aliases
+alias zsh='vim ~/.zshrc'
+alias q='exit'
+alias s='sudo'
+alias v='vim'
+alias g='git'
+alias ga='git add'
+alias gc='git checkout'
+alias gs='git status'
+alias gd='git diff'
+alias sv='sudo vim'
+alias sc="source ~/.zshrc"
+alias ..='cd ..'
+alias cls='clear'
+alias nano="vim"
+alias tailf="tail -f"
+alias lf='ll -p | grep -v /'
+alias ldir='ls -ld -- */'
+```
+
 ## Git Config
 
 Replace name, email, GitHub user.
