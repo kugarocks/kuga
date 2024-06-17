@@ -185,6 +185,3 @@ Download [.kubectl\_aliases](https://raw.githubusercontent.com/ahmetb/kubectl-al
 function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 ```
 
-
-
-## Zsh
